@@ -15,6 +15,8 @@ import org.springframework.data.repository.cdi.Eager;
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    @Column(name = "serviceId",nullable = false)
     private Long serviceId;
     @Column(name="vehicleType",nullable=false)
     private String vehicleType;
